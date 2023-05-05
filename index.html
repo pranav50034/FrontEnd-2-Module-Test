@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>F2 Module Test</title>
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+   <body onload="fetchData()">
+      <header>
+         <h1>Student Portal</h1>
+      </header>
+      <section class="controls">
+         <form action="" onsubmit="searchUser(event)">
+            <input
+               type="text"
+               name="search"
+               id="searchBar"
+               placeholder="Search"
+            />
+            <input type="submit" id="submit" value="Search" />
+         </form>
+         <div class="chips-container">
+            <button class="chips" onclick="sortAsc(event)">Sort A->Z</button
+            ><button class="chips" onclick="sortDsc(event)">Sort Z->A</button
+            ><button class="chips" onclick="sortMarks(event)">
+               Sort By Marks</button
+            ><button class="chips" onclick="sortPass(event)">
+               Sort By Passing</button
+            ><button class="chips" onclick="sortClass(event)">
+               Sort By Class</button
+            ><button class="chips" onclick="sortGender()">
+               Sort By Gender
+            </button>
+         </div>
+      </section>
+
+      <section id="normieTable">
+         <table id="table">
+            <thead>
+               <tr>
+                  <th>ID</th>
+                  <th class="name">Name</th>
+                  <th>Gender</th>
+                  <th>Class</th>
+                  <th>Marks</th>
+                  <th>Passing</th>
+                  <th>Email</th>
+               </tr>
+            </thead>
+            <tbody id="tableBody">
+               <!-- 
+                    <tr>
+                        <td>1</td>
+                        <td>Pranav Pokale</td>
+                        <td>Male</td>
+                        <td>TY BBACA</td>
+                        <td>70%</td>
+                        <td>2023</td>
+                        <td>pranavpokale50034@gmail.com</td>
+                    </tr>
+                -->
+            </tbody>
+         </table>
+      </section>
+
+      <section id="genderTable">
+         <table id="femaleTable">
+            <thead>
+               <tr>
+                  <th>ID</th>
+                  <th class="name">Name</th>
+                  <th>Gender</th>
+                  <th>Class</th>
+                  <th>Marks</th>
+                  <th>Passing</th>
+                  <th>Email</th>
+               </tr>
+            </thead>
+            <tbody id="femaleTableBody"></tbody>
+         </table>
+         <table id="maleTable">
+            <thead>
+               <tr>
+                  <th>ID</th>
+                  <th class="name">Name</th>
+                  <th>Gender</th>
+                  <th>Class</th>
+                  <th>Marks</th>
+                  <th>Passing</th>
+                  <th>Email</th>
+               </tr>
+            </thead>
+            <tbody id="maleTableBody"></tbody>
+         </table>
+      </section>
+
+      <script src="./script.js"></script>
+   </body>
+</html>
